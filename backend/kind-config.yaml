@@ -1,0 +1,18 @@
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+containerdConfigPatches:
+  - |
+    [plugins."io.containerd.grpc.v1.cri".registry.mirrors."localhost:5001"]
+      endpoint = ["http://kind-registry:5000"]
+nodes:
+  - role: control-plane
+    extraPortMappings:
+      - containerPort: 5001
+        hostPort: 5001
+        protocol: TCP
+      - containerPort: 6443
+        hostPort: 6444 # Change this to an available port
+        protocol: TCP
+networking:
+  apiServerAddress: "127.0.0.1"
+  apiServerPort: 6444 # Match this to the updated port

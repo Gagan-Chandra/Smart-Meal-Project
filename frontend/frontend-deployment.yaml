@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+  labels:
+    app: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: gcr.io/smart-meal-project/your-frontend-image:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        env:
+        - name: REACT_APP_API_URL
+          value: "http://104.154.238.75:5000"
+      imagePullSecrets: # Correct placement of imagePullSecrets
+      - name: gcr-json-key
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-service
+  annotations:
+    cloud.google.com/load-balancer-ip: "34.41.64.119" # Replace with your reserved IP
+spec:
+  selector:
+    app: frontend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: LoadBalancer

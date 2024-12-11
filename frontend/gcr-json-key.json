@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "smart-meal-project",
+  "private_key_id": "47794f794193441f26d24f586f645d96590cc9d1",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCwN+TWooHlJ0LG\njczcBDrNh2Imx3o00wC1bXYyWGf7iI+vYxVBzCdAFDLt6tcZuYIQ/uQMIoDS+VYl\nVksd9PV6FgvQoeAaOtSysTFZeEng4Wy+nkCWDHergeO1JY72E/CcZTSP/f1r3wCn\nRWjWoaxXTO/IdY4jURKKkD+BvSkWdEASJ/LCJlb4yvcgG6PEreSAdP4YetI7IPw5\nVE1vyWWXTz32eq0AewCXxveoyMp32Q0kCVQ0ADtAByJ2kjgkwZib5ifcO/orOj/F\nVIjJXp6Zf0gOMG8oHBkzrX5BVukpRoGqKEyLsXonzNmdO2dSkzuHibjnTSvrcyY3\nnvtjruGXAgMBAAECggEAOgd1+r5SEzGuGi+I9i0IZjU+e7G1yx5u/c/Zm/Oj7l+G\nnYV98wh1JnNgYBu1ENoXfFxLoblc/dyw4yO7IdbQXY9T/bTI1Sppb5zNOP7VKVJi\nmpUHhMH/SIHCCB2hqeRgGEh1mjNUWEj78Jl5UDC2TZte3P7lOzkP54Rf/Wva03MQ\noRYmXTKVhkHZNNtcMrubIlPkBnPsHNNPoNV76PKzvyYV5dRa0W6cd3drD9DX1hoc\n2j8fTY6sKvPIhRdFlk2kKlqgEeGOfFPF7bjiegb+x56EfC0xk7NfDD/kfi5dHn/B\nFMnqV9jyLsRvSzyWc25+AVa4jBMqVo/ZLkpFtcPPQQKBgQDywhEKUEsCoQCJvphC\nYVgZ9iqyufq7ieZZh64t7CEtENoXCBz7/rb9EVTwNHF7zACpuysd0Xwulc3LAorY\nrMZ9rZ18ggV0cCxsW3XVmNRpxjZVU6ItZauHmHXFOVuxCdtbd5lCHw2y/uPWGSUv\nCGKDYREcOlFfgta/woJ6DkI1QQKBgQC51KZrznVKMOEASJcfxCrDZ+59eF88bCPB\nFrAt38IklkKDOXkmdgzAuSy4E7hcSJivFcNYKmuwK19J3GGigYVqp8pYg5MGIGBR\nMURBE/6IkFgWukZaL0Y37BHhTUTfcadIYJtsUABd1aApl0r0xuV0o7/EhEbNkYPO\nsXjEl0Io1wKBgDLKh+YwhoE2TnaDejfpRhWoe6aJYvx6DcgNq1PQY+CZ9gd7mxTe\nZkrspWjckCHmvPzGPG8wtVrJ3RTso0BSZfVFrf2u9pU2IxVIzY6zOz4mSpfvt67n\n5suoCnwJVDXmag7pJxe+h4875U+WU0FT78itNndBfGUPav8UI1iGQzQBAoGBAKXX\n2g4sWxCzPpp6LiTzdRafEoB3hMbv25jfHqxSHXl5gDKMgEqK4Ca/G+HL96SkRV88\nFPICKck3a/sG6zuUS/U7eaI1CmlVS6AqT7ekmGxYJcViyJaDyi7uR6bCxsyDKb+2\nN/8aBrm3hRCZLRP2zaCi4uoHAwlC7Fbym80XELxRAoGBAKwgQzBKWZs+RpnGAGMZ\nRG5gxZgQsPAwgiqDYvSNbMLfyTBcP070gbLgR3S3rpK/skesbHtw/+OoLqWtNidQ\neJEEaPBuarTCjPhkh+VXpaY+fHGx9m5IypngeMk4Kunj/4LakA5oxtOg0WSGifHY\nwpylT5BUpH06N+j/EYJszcaM\n-----END PRIVATE KEY-----\n",
+  "client_email": "k8s-image-puller@smart-meal-project.iam.gserviceaccount.com",
+  "client_id": "103195409074270609291",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/k8s-image-puller%40smart-meal-project.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

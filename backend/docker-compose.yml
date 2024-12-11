@@ -1,0 +1,74 @@
+version: "3.8"
+
+services:
+  backend-app:
+    build:
+      context: .
+    ports:
+      - "5000:5000"
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DB_HOST: db
+      DB_USER: root
+      DB_PASSWORD: saikumar224
+      DB_NAME: meal_planner
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    networks:
+      - app-network
+
+  redis-server:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    networks:
+      - app-network
+
+  rabbitmq-server:
+    image: rabbitmq:management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - rabbitmq-data:/var/lib/rabbitmq
+    networks:
+      - app-network
+
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: saikumar224
+      MYSQL_DATABASE: meal_planner
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-psaikumar224"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    volumes:
+      - db-data:/var/lib/mysql
+    networks:
+      - app-network
+
+  frontend-app:
+    build:
+      context: ../frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend-app
+    environment:
+      REACT_APP_API_URL: "http://104.154.238.75:5000"
+    networks:
+      - app-network
+
+volumes:
+  db-data:
+  rabbitmq-data:
+
+networks:
+  app-network:
