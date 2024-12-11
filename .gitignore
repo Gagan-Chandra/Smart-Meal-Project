@@ -1,0 +1,4 @@
+backend/backend-app.tar
+backend/data/recipes.csv
+node_modules/.git/lfs/objects
+.git/objects/pack
